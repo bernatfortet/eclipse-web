@@ -8,12 +8,13 @@ export default class ClassName extends Component {
     children: 'Press Button',
     className: '',
     secondary: null,
+    onClick: () => {}
   }
 
   render(){
-    const { backgroundColor, className, secondary } = this.props
+    const { backgroundColor, className, secondary, onClick } = this.props
     return(
-      <Wrapper backgroundColor={backgroundColor} className={className} secondary={true} >
+      <Wrapper backgroundColor={backgroundColor} className={className} secondary={true} onClick={onClick} >
         {this.props.children}
       </Wrapper>
     )
@@ -26,7 +27,7 @@ import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
 
 const hover = css` background-color:${m.colors.black}; transition: 100ms background-color;`
-const secondary = css` background-color:white; border:2px solid ${m.colors.black}; color:${m.colors.black};
+const secondary = css` background-color:transparent; border:2px solid ${m.colors.black}; color:${m.colors.black};
   &:hover{ color:white; }
 `
 

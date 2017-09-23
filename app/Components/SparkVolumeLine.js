@@ -1,15 +1,24 @@
 // @flow
 import React, { Component } from 'react'
 
-export default class ClassName extends Component {
+import Area from 'components/Area'
+
+export default class SparkVolumeLine extends Component {
 
   static defaultProps = {
     obj: '',
   }
 
   render(){
+    const areaProps = {
+      margin: { top:0, left:0, right:0, bottom:0 },
+      height: 44,
+      width: 160,
+    }
     return(
-      <Wrapper>Heyo</Wrapper>
+      <Wrapper>
+        <Area {...areaProps} />
+      </Wrapper>
     )
   }
 }

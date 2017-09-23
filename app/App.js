@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react'
-import Routes from 'config/routes'
+import Routes from 'app/Routes'
 
 
 class App extends Component {
@@ -12,8 +12,6 @@ class App extends Component {
   render() {
     return <Routes />
   }
-
-
 }
 
 //Redux Setup

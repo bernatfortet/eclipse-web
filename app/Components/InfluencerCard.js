@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react'
 
+
 export default class ClassName extends Component {
 
   static defaultProps = {

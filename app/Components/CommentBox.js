@@ -12,15 +12,11 @@ const MIN_CHARACTERS_ALERT = 20
 
 export default class CommentBox extends Component {
 
-  static defaultProps = {
-    obj: '',
-  }
-
   textarea = {}
 
   state = {
     text: '',
-    isActive: true,
+    isActive: false,
     selectedSentiment: SENTIMENT_TYPES.BUY,
   }
 
@@ -61,6 +57,14 @@ export default class CommentBox extends Component {
       this.setState({ isActive: false })
   }
 
+  onSendComment = () => {
+    console.log(`here` )
+    const commentText = this.state.text
+    //TODO send comment to DB
+
+    this.setState({ text: '' })
+  }
+
   renderInfo(){
     const { isActive } = this.state
     if( !isActive ) return null
@@ -70,7 +74,7 @@ export default class CommentBox extends Component {
         {this.renderSentiments()}
         <Row>
           <RamainingCharacters characters={ramainingCharacters}>{ramainingCharacters}</RamainingCharacters>
-          <CommentButton>Comment</CommentButton>
+          <CommentButton onClick={this.onSendComment}>Comment</CommentButton>
         </Row>
       </FocusInfo>
     )
@@ -106,7 +110,7 @@ import styled, { css } from 'styled-components'
 import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
 
-const Wrapper = styled(Row)` width:100%; max-width:600px; padding:16px; ${m.rounding} ${m.border} background-color:white; `
+const Wrapper = styled(Row)` margin-bottom:12px; padding:16px; ${m.rounding} ${m.border} background-color:white; `
   const Content = styled(Column)` flex:1; margin-left:16px; `
 
   const activeTextarea = css``
@@ -128,4 +132,4 @@ const Wrapper = styled(Row)` width:100%; max-width:600px; padding:16px; ${m.roun
     const RamainingCharacters = styled.div` ${s.jcc} ${s.aic} margin-right:12px;
       color:${p => p.characters <= MIN_CHARACTERS_ALERT ? m.colors.red : ''};
     `
-    const CommentButton = styled(Button)`  `
+    const CommentButton = styled(Button)` ${s.unselectable}  `

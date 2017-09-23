@@ -10,10 +10,8 @@ import CoinTracked from 'components/CoinTracked'
 import Comment from 'components/Comment'
 import CommentBox from 'components/CommentBox'
 import FollowButton from 'components/FollowButton'
-import FollowInfluencerCard from 'components/FollowInfluencerCard'
 import FollowUserCard from 'components/FollowUserCard'
 import GrowthSidebar from 'components/GrowthSidebar'
-import HoldingsTable from 'components/HoldingsTable'
 import Sentiment from 'components/Sentiment'
 import SourceCard from 'components/SourceCard'
 import SparkVolumeLine from 'components/SparkVolumeLine'
@@ -67,17 +65,7 @@ export default class StyleGuide extends Component {
   renderComponents(){
     return(
       <Section aifs>
-        <CommentBox />
-        <Comment />
-        <FollowButton />
-        <FollowInfluencerCard />
-        <FollowUserCard />
-        <FindFriendsButton />
-        <GrowthSidebar />
-        <HoldingsTable />
-        <Sentiment />
         <SourceCard />
-        <SparkVolumeLine />
         <SymbolSearchBox />
         <UserProfileData />
         <StylesTitle>Components</StylesTitle>
@@ -85,6 +73,14 @@ export default class StyleGuide extends Component {
         <Button />
         <CoinLogo />
         <CoinTracked />
+        <CommentBox />
+        <Comment />
+        <FollowButton />
+        <FollowUserCard />
+        <FindFriendsButton />
+        <GrowthSidebar />
+        <SparkVolumeLine />
+        <Sentiment />
       </Section>
     )
   }

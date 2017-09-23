@@ -23,9 +23,9 @@ export default class CoinLogo extends Component {
     if( imageUrl )
       return imageUrl
     else if( symbol )
-      return `https://files.coinmarketcap.com/static/img/coins/32x32/${utils.getCoinIdFromSymbol(symbol)}.png`
+      return `https://files.coinmarketcap.com/static/img/coins/64x64/${utils.getCoinIdFromSymbol(symbol)}.png`
     else if( coinName )
-      return `https://files.coinmarketcap.com/static/img/coins/32x32/${coinName}.png`
+      return `https://files.coinmarketcap.com/static/img/coins/64x64/${coinName}.png`
     else
       return ''
   }

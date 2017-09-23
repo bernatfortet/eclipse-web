@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react'
 
-export default class ClassName extends Component {
+export default class SourceCard extends Component {
 
   static defaultProps = {
     obj: '',
@@ -9,7 +9,7 @@ export default class ClassName extends Component {
 
   render(){
     return(
-      <Wrapper>Heyo</Wrapper>
+      <Wrapper>SourceCard</Wrapper>
     )
   }
 }

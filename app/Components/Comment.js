@@ -5,6 +5,7 @@ import moment from 'moment'
 
 import Avatar from 'components/Avatar'
 import StatsButtons from 'components/StatsButtons'
+import { Link } from 'react-router-dom'
 
 export default class Comment extends Component {
 
@@ -12,6 +13,7 @@ export default class Comment extends Component {
     comment: {
       user: {
         name: 'Vinny Lingham',
+        userName: 'vinnylingham',
         imageUrl: 'https://pbs.twimg.com/profile_images/868501388636045312/hRzmxxvG_400x400.jpg'
       },
       text: 'With China banning ICO’s I see it as an opportune time to jump in a purchase BTC. Some people might feel otherwise but I think this is the time to go all in! ',
@@ -29,12 +31,16 @@ export default class Comment extends Component {
 
     const timeStamp = '1 d' //new Date(comment.timeStamp).toString()
     const priceStamp = comment.priceStamp
+    const link = { to: `/profile/${comment.user.userName}` }
+
     return(
       <Wrapper>
-        <Avatar size={64} imageUrl={comment.user.imageUrl} />
+        <Link {...link} >
+          <Avatar size={64} imageUrl={comment.user.imageUrl} />
+        </Link>
         <Content>
           <Row jcsb>
-            <UserName>{comment.user.name}</UserName>
+            <UserName {...link} >{comment.user.name}</UserName>
             <Stamps>{timeStamp} - {priceStamp}</Stamps>
           </Row>
           <Text>{comment.text}</Text>
@@ -54,14 +60,14 @@ import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
 
 const Wrapper = styled(Row)` padding:16px; ${m.border} border-color:transparent; ${m.rounding}
-  &:hover{ ${m.border} }
+  &:hover{ ${m.border} background-color:white;}
 `
 
 const Content = styled.div` margin-left:16px; `
 
   const Stamps = styled.div` color:${m.colors.black50}; line-height:24px; `
 
-  const UserName = styled.div` ${m.t1} margin-bottom:4px; `
+  const UserName = styled(Link)` ${m.t2} ${m.tLink} margin-bottom:4px;`
   const Text = styled.div` ${m.tBody} margin-bottom:8px; `
 
   const Stats = styled(Row)`

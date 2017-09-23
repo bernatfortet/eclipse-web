@@ -1,7 +1,9 @@
 // @flow
 import React, { Component } from 'react'
 
-export default class HomeScreen extends Component {
+import Screen from 'app/Screens/Screen'
+
+export default class HomeScreen extends Screen {
 
   render(){
     return(

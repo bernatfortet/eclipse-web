@@ -6,13 +6,13 @@ export default class Avatar extends Component {
   static defaultProps = {
     imageUrl: 'https://pbs.twimg.com/profile_images/868501388636045312/hRzmxxvG_400x400.jpg',
     size: 40,
-    style: {},
+    className: '',
   }
 
   render(){
-    const { imageUrl, size, style } = this.props
+    const { imageUrl, size, className } = this.props
     return(
-      <Image src={imageUrl} size={size} style={style} />
+      <Image src={imageUrl} size={size} className={className} />
     )
   }
 }
@@ -23,5 +23,5 @@ import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
 
 const Image = styled.img`
-  width:${p => p.size}px; height:${p => p.size}px; border-radius:50%;
+  width:${p => p.size}px; height:${p => p.size}px; display:block; border-radius:50%;
 `
