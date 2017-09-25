@@ -72,9 +72,7 @@ export const t3 = css` color:${colors.black}; font-size:16px; font-weight:400; `
 export const t4 = css` color:${colors.black50}; font-size:14px; letter-spacing:2.1px; text-transform:uppercase; `
 
 export const tBody = css` color:${colors.black}; font-size:16px; line-height:24px; `
-export const tLink = css`  text-decoration:none; transition:100ms;
-  &:hover{ color:${colors.brand}; }
-`
+export const tLink = css` text-decoration:none; transition:100ms; `
 export const tNav = css` font-size:16px; font-weight:400; letter-spacing: -0.1px; `
 
 

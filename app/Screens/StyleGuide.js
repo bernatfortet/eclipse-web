@@ -6,7 +6,7 @@ import MdLocation from 'react-icons/lib/md/location-on'
 import CoinBadge from 'components/CoinBadge'
 import Button from 'components/Button'
 import CoinLogo from 'components/CoinLogo'
-import CoinTracked from 'components/CoinTracked'
+import TrackedCoin from 'components/TrackedCoin'
 import Comment from 'components/Comment'
 import CommentBox from 'components/CommentBox'
 import FollowButton from 'components/FollowButton'
@@ -72,7 +72,7 @@ export default class StyleGuide extends Component {
         <CoinBadge />
         <Button />
         <CoinLogo />
-        <CoinTracked />
+        <TrackedCoin />
         <CommentBox />
         <Comment />
         <FollowButton />

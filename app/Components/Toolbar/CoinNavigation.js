@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 
 import NavigationLink from 'components/Toolbar/NavigationLink'
-import TrackedCoinItem from 'components/Toolbar/TrackedCoinItem'
+import NavigationTrackedCoin from 'components/Toolbar/NavigationTrackedCoin'
 import SearchBox from 'components/Toolbar/SearchBox'
 
 import { coins } from 'utils/mockData'
@@ -19,9 +19,9 @@ export default class CoinNavigation extends Component {
       <Wrapper>
         <SearchBox />
 
-        <CoinsList>
-          {this.renderCoins()}
-        </CoinsList>
+          <CoinsList>
+            {this.renderCoins()}
+          </CoinsList>
 
       </Wrapper>
     )
@@ -33,7 +33,7 @@ export default class CoinNavigation extends Component {
       const trackedCoin = trackedCoins[key]
       return(
         <NavigationLink key={key} to={`/coin/${trackedCoin.symbol}`}>
-          <TrackedCoinItem
+          <NavigationTrackedCoin
             symbol={trackedCoin.symbol}
             currentPrice={trackedCoin.currentPrice}
             onClick={() => this.onClickCoin(trackedCoin)}
@@ -44,8 +44,7 @@ export default class CoinNavigation extends Component {
   }
 
   onClickCoin = ( trackedCoin: Object ) => {
-    console.log(`this.props`, this.props )
-    // this.props.push('/coin/')
+    console.log(`User pressed Coin`, this.props )
   }
 }
 

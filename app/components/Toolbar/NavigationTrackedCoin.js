@@ -3,9 +3,13 @@ import * as cryptocurrenciesUtils from 'utils/cryptocurrencies'
 
 import React, { Component } from 'react'
 import CoinLogo from 'components/CoinLogo'
-import MdBubble from 'react-icons/lib/md/chat-bubble-outline'
+import PriceStat from 'components/Indicators/PriceStat'
+import ChangeStat from 'components/Indicators/ChangeStat'
+import CommentsStat from 'components/Indicators/CommentsStat'
 
-export default class TrackedCoinItem extends Component {
+import MdStar from 'react-icons/lib/md/star'
+
+export default class NavigationTrackedCoin extends Component {
 
   static defaultProps = {
     symbol: 'BTC',
@@ -24,14 +28,12 @@ export default class TrackedCoinItem extends Component {
         <Header vCenter>
           <CoinLogo size={22} symbol={symbol} isEncircled={true} />
           <CoinName>{coinName}</CoinName>
+          <StarIcon />
         </Header>
         <Row jcsb aife>
-          <CurrentPrice>{currentPrice}</CurrentPrice>
-          <Change value={change}>{change > 0 ? '+' : ''}${change}%</Change>
-          <Row>
-            <ReplyIcon />
-            <CommentsCount>{commentsCount}</CommentsCount>
-          </Row>
+          <PriceStat value={currentPrice} />
+          <ChangeStat value={change} />
+          <CommentsStat value={commentsCount} />
         </Row>
 
       </Wrapper>
@@ -44,13 +46,8 @@ import styled from 'styled-components'
 import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
 
-const Wrapper = styled(Column)` padding:12px 12px; flex:1; `
+const Wrapper = styled(Column)` padding:12px 12px; flex:1; position:relative; `
 
   const Header = styled(Row)` margin-bottom:8px;  `
-
   const CoinName = styled.div`  margin-left:8px; ${m.tNav} `
-  const CurrentPrice = styled.div`  `
-  const Change = styled.div` ${m.changeColors} font-size:12px; `
-  const CommentsCount = styled.div` font-size:12px; `
-
-  const ReplyIcon = styled(MdBubble).attrs({ size:14 })` margin-right:4px; `
+  const StarIcon = styled(MdStar).attrs({ size:12 })` margin-left:4px; `
