@@ -90,7 +90,7 @@ module.exports = {
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
 			app: path.resolve(__dirname, '../app/'),
-			components: path.resolve(__dirname, '../app/Components/'),
+			components: path.resolve(__dirname, '../app/components/'),
 			utils: path.resolve(__dirname, '../app/utils/'),
 			config: path.resolve(__dirname, '../app/config/'),
 			controllers: path.resolve(__dirname, '../app/controllers/'),

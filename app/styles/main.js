@@ -16,7 +16,7 @@ export const colors = {
   green: '#67C202',
   red: '#FF5900',
   background: '#FAFBFC',
-  darkBackground: '#272D3B',
+  darkBackground: '#1A1D24',
 
   black: black,
   black95: rgba( black, 0.95),
@@ -52,7 +52,7 @@ export const roundness = 12
 export const borderStyle = `1px solid ${colors.black10} `
 export const icon = css` width:${p => p.size}px; height:${p => p.size}px; font-size:${p => p.size}px; `
 export const changeColors = css`
-  color: ${p => p.value >= 0 ? colors.green : colors.red };
+  color: ${p => p.value == 0 ? colors.black : p.value > 0 ? colors.green : colors.red };
 `
 export const rounding = css` border-radius:${roundness}px; `
 export const shadow = css` box-shadow:0 2 16px 0 rgba(0, 0, 0, 0.05); `
@@ -75,6 +75,7 @@ export const tBody = css` color:${colors.black}; font-size:16px; line-height:24p
 export const tLink = css`  text-decoration:none; transition:100ms;
   &:hover{ color:${colors.brand}; }
 `
+export const tNav = css` font-size:16px; font-weight:400; letter-spacing: -0.1px; `
 
 
 export const H1 = styled.div` ${h1} margin-bottom:8px;`

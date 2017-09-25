@@ -7,7 +7,6 @@ import ReactHighcharts from 'react-highcharts'
 import HighchartsTreemap from 'highcharts-treemap'
 HighchartsTreemap(ReactHighcharts.Highcharts)
 
-import HighChart from 'components/Charts/HighChart'
 
 import { transparentize } from 'polished'
 import { cryptocurrencies } from 'utils/cryptocurrencies'
@@ -22,7 +21,7 @@ const rawData = [
 
 const data = fadeDataColors(rawData)
 
-export default class HoldingsTreeMap extends HighChart {
+export default class HoldingsTreeMap extends Component {
 
   chart = null
 
@@ -55,6 +54,7 @@ const textColor = '#BCC0C2'
 
 const CONFIG = {
   title: { text: '' },
+  credits: { enabled: false },
   plotOptions: {
     series: {
       animation: { duration: 200 },
@@ -97,7 +97,6 @@ function fadeDataColors( coins: Array<Object> ){
 
 
 const renderCoinImage = ( coin: Object ) => {
-  console.log(`this`, coin )
   const coinImageUrl = `https://files.coinmarketcap.com/static/img/coins/64x64/${coin.id}.png`
   const size = 32
   const border = 4

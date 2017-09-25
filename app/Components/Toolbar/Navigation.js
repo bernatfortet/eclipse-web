@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react'
 
-import { Link } from 'react-router-dom'
+import NavigationLink from 'components/Toolbar/NavigationLink'
 
 import MdAccountBalanceWallet from 'react-icons/lib/md/account-balance-wallet'
 import MdInsertChart from 'react-icons/lib/md/insert-chart'
@@ -34,14 +34,12 @@ import styled, { css } from 'styled-components'
 import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
 
-const Wrapper = styled.div` padding:12px; `
+const Wrapper = styled.div``
 
-  const icon = css` width:20px; height:20px; color:${m.colors.white60}; margin-right:8px; `
+  const icon = css` width:20px; height:20px; margin-right:8px; `
 
-  const ItemLink = styled(Link)` padding:12px 0; color:${m.colors.white60}; ${s.aic} font-size:16px; font-weight:400; ${s.anchor} transition:200ms;
-  text-decoration:none;
-    &:hover{ color:white;  transition:400ms; }
-    &:hover > *{ color:white;  transition:400ms; }
+  const ItemLink = styled(NavigationLink)`
+    padding:12px 12px; ${s.aic} ${m.tNav}
   `
 
     const DashboardIcon = styled(MdAccountBalanceWallet)` ${icon} `

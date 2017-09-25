@@ -6,11 +6,11 @@ export const users = {
 }
 
 export const coins = {
-  0: { symbol: 'BTC', currentPrice: 4423.55, change: 9.31, commentsCount: 44, amount: 16.12, },
-  1: { symbol: 'ETH', currentPrice: 234.12, change: 14.31, commentsCount: 75, amount: 223.57, },
-  2: { symbol: 'LTC', currentPrice: 45.94, change: 5.31, commentsCount: 12, amount: 44.94, },
-  3: { symbol: 'CVC', currentPrice: 45.94, change: 5.31, commentsCount: 12, amount: 44.94, },
-  4: { symbol: 'XMR', currentPrice: 45.94, change: 5.31, commentsCount: 12, amount: 44.94, },
+  'BTC': { symbol: 'BTC', currentPrice: 4423.55, change: 9.31, commentsCount: 44, amount: 16.12, percentPortfolio: 10 },
+  'ETH': { symbol: 'ETH', currentPrice: 234.12, change: 14.31, commentsCount: 75, amount: 223.57, percentPortfolio: 10 },
+  'LTC': { symbol: 'LTC', currentPrice: 45.94, change: 5.31, commentsCount: 12, amount: 44.94, percentPortfolio: 10 },
+  'CVC': { symbol: 'CVC', currentPrice: 45.94, change: 5.31, commentsCount: 12, amount: 44.94, percentPortfolio: 10 },
+  'XMR': { symbol: 'XMR', currentPrice: 45.94, change: 5.31, commentsCount: 12, amount: 44.94, percentPortfolio: 10 },
 }
 
 export const influencers = {

@@ -9,13 +9,25 @@ export default class CoinLogo extends Component {
     imageUrl: '',
     desaturate: false,
     size: 20,
+    isEncircled: false,
   }
 
   render(){
-    const { desaturate, size } = this.props
-    return(
-      <Logo imageUrl={this.getImageUrl()} size={size ? size : 20} desaturate={desaturate ? true : false} />
-    )
+    const { isEncircled } = this.props
+
+    if( isEncircled )
+      return(
+        <LogoCircle>
+          {this.renderLogo()}
+        </LogoCircle>
+      )
+    else
+      return this.renderLogo()
+  }
+
+  renderLogo(){
+    const { size, desaturate } = this.props
+    return <Logo imageUrl={this.getImageUrl()} size={size ? size : 20} desaturate={desaturate ? true : false} />
   }
 
   getImageUrl(){
@@ -34,7 +46,7 @@ export default class CoinLogo extends Component {
 
 // Styles
 import styled, { css } from 'styled-components'
-import { s, c, Row, Column } from '@bernatfortet/global-styles'
+import { s, c, Row, Column, Circle } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
 
 const Logo = styled.div.attrs({
@@ -45,5 +57,7 @@ const Logo = styled.div.attrs({
   background-repeat: no-repeat;
   ${p => p.desaturate ? desaturate : '' }
 `
+
+const LogoCircle = styled(Circle)` background-color:white; ${s.jcc} ${s.aic} `
 
 const desaturate = css` filter: grayscale(1); `

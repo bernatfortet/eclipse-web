@@ -9,17 +9,22 @@ import CommentsSection from 'components/CommentsSection'
 import GrowthSidebar from 'components/GrowthSidebar'
 import CoinChart from 'components/Charts/CoinChart'
 
+import { coins } from 'utils/mockData'
+
 export default class Coin extends Screen {
 
   render(){
-    return(
+    console.log(`this.props`, this.props )
+    const coinSymbol = this.props.match.params.coinSymbol
+    const coin = coins[coinSymbol]
 
+    return(
       <Wrapper>
         <Toolbar />
         <Content>
           <CoinChart />
           <Inner jcsb>
-            <CoinData />
+            <CoinData coin={coin} />
             <CommentsSection />
             <GrowthSidebar />
           </Inner>

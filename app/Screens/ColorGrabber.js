@@ -7,7 +7,7 @@ import { cryptocurrencies } from 'utils/cryptocurrencies'
 import { urls } from 'utils/coinImagesUrls.js'
 import { coins } from 'utils/coinslist.js'
 
-export default class ClassName extends Component {
+export default class ColorGrabber extends Component {
 
   static defaultProps = {
     obj: '',

@@ -22,7 +22,7 @@ const Routes = () => (
     <Route exact path={`/dashboard`} component={Dashboard}/>
     <Route exact path={`/holdings`} component={Holdings}/>
     <Route exact path={`/profile/:userId`} component={Profile}/>
-    <Route exact path={`/coin/:coinId`} component={Coin}/>
+    <Route exact path={`/coin/:coinSymbol`} component={Coin}/>
     <Route exact path={`/styleguide`} component={StyleGuide}/>
   </MainAppWrapper>
 )

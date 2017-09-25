@@ -2,8 +2,8 @@
 import React, { Component } from 'react'
 
 
-import Link from 'components/Link'
-import CoinTracked from 'components/Toolbar/CoinTracked'
+import NavigationLink from 'components/Toolbar/NavigationLink'
+import TrackedCoinItem from 'components/Toolbar/TrackedCoinItem'
 import SearchBox from 'components/Toolbar/SearchBox'
 
 import { coins } from 'utils/mockData'
@@ -32,13 +32,13 @@ export default class CoinNavigation extends Component {
     return Object.keys(trackedCoins).map( key => {
       const trackedCoin = trackedCoins[key]
       return(
-        <Link key={key} to={`/coin/${trackedCoin.symbol}`}>
-          <CoinTracked
+        <NavigationLink key={key} to={`/coin/${trackedCoin.symbol}`}>
+          <TrackedCoinItem
             symbol={trackedCoin.symbol}
             currentPrice={trackedCoin.currentPrice}
             onClick={() => this.onClickCoin(trackedCoin)}
           />
-        </Link>
+        </NavigationLink>
       )
     })
   }
