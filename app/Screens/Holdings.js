@@ -16,23 +16,23 @@ export default class Holdings extends Screen {
       <Wrapper>
         <Toolbar />
         <Content>
-          <Row>
-            <Column>
+          <TotalStats>
+            <Block>
               <m.T4>Value</m.T4>
               <Value>$56,500</Value>
-            </Column>
+            </Block>
 
-            <Column>
+            <Block>
               <m.T4>Invested</m.T4>
               <Value>$5,500</Value>
-            </Column>
+            </Block>
 
-            <Column>
+            <Block>
               <m.T4>Absolute Growth</m.T4>
               <SparkVolumeLine symbol={'BTC'} color={'orange'} />
-            </Column>
+            </Block>
 
-          </Row>
+          </TotalStats>
           <HoldingsTreeMap />
           <HoldingsTable />
         </Content>
@@ -49,4 +49,6 @@ import * as m from 'styles/main'
 const Wrapper = styled(m.Screen)` ${s.flxRow}  `
   const Content = styled.div` width:100%; margin-left:180px; padding:30px;  `
 
-    const Value = styled.div`  `
+  const TotalStats = styled(Row)` margin-bottom:24px; `
+    const Block = styled(Column)` margin-right:80px;  `
+      const Value = styled.div` font-size:44px; font-weight:600; `

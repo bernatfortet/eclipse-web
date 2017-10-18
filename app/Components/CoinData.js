@@ -1,8 +1,8 @@
 // @flow
 import React, { Component } from 'react'
 
+import MyHoldings from 'components/MyHoldings'
 import CoinLogo from 'components/CoinLogo'
-import DonutChart from 'components/Charts/DonutChart'
 
 import { coins } from 'utils/mockData'
 import { cryptocurrencies } from 'utils/cryptocurrencies'
@@ -16,14 +16,17 @@ export default class CoinData extends Component {
   render(){
     const { coin } = this.props
 
-    const coinColor = cryptocurrencies[coin.symbol].color
+    const coinName = cryptocurrencies[coin.symbol].name
     return(
       <Wrapper>
 
-        <Row>
-          <CoinLogo symbol={coin.symbol} />
-          <CoinName>Bitcoin</CoinName>
+        <Row vCenter>
+          <CoinLogo size={40} symbol={coin.symbol} />
+          <CoinName>{coinName}</CoinName>
         </Row>
+
+        <Title>Your Holdings</Title>
+        <MyHoldings coin={coin} />
 
         <Title>Market Cap</Title>
         <Value>$66,115,458,697</Value>
@@ -34,7 +37,6 @@ export default class CoinData extends Component {
         <Title>Max Supply</Title>
         <Value>21,000,000</Value>
 
-        <DonutChart percet={coin.percentPortfolio} color={coinColor} />
       </Wrapper>
     )
   }
@@ -45,8 +47,8 @@ import styled from 'styled-components'
 import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
 
-const Wrapper = styled.div` padding:20px; `
+const Wrapper = styled.div` width:200px; padding:0 20px; `
 
-  const CoinName = styled.div`  `
+  const CoinName = styled.div` ${m.h2} margin-left:8px; font-weight:600;`
   const Title = styled.div` margin:16px 0 4px; ${m.t3} font-weight:500; color:${m.colors.black50}; `
   const Value = styled.div` ${m.t3} `

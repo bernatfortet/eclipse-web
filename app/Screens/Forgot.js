@@ -1,21 +1,17 @@
 // @flow
 import React, { Component } from 'react'
 
-export default class Screen extends Component {
+export default class Forgot extends Component {
 
   static defaultProps = {
+    obj: '',
   }
 
-  componentDidUpdate(prevProps: Object) {
-    if (this.props.location !== prevProps.location) {
-      window.scrollTo(0, 0)
-    }
+  render(){
+    return(
+      <Wrapper>Forgot</Wrapper>
+    )
   }
-
-  render() {
-    return this.props.children
-  }
-
 }
 
 // Styles

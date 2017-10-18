@@ -14,7 +14,6 @@ import { coins } from 'utils/mockData'
 export default class Coin extends Screen {
 
   render(){
-    console.log(`this.props`, this.props )
     const coinSymbol = this.props.match.params.coinSymbol
     const coin = coins[coinSymbol]
 
@@ -22,7 +21,7 @@ export default class Coin extends Screen {
       <Wrapper>
         <Toolbar />
         <Content>
-          <CoinChart />
+          <CoinChart symbol={coin.symbol} />
           <Inner jcsb>
             <CoinData coin={coin} />
             <CommentsSection />
@@ -42,4 +41,5 @@ import * as m from 'styles/main'
 
 const Wrapper = styled(m.Screen)` ${s.flxRow}  `
   const Content = styled(m.Content)` flex:1; ${s.flxCol}  `
-    const Inner = styled(Row)` margin-top:20px;  padding:30px; `
+    const Inner = styled(Row)`  padding:30px; `
+    const Test = styled.div` height:280px; `

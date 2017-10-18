@@ -8,7 +8,7 @@ import downsampler from 'utils/downsampler'
 
 import { BTC } from 'utils/chartData'
 
-export default class CoinChart extends Component {
+export default class HomescreenChart extends Component {
 
   static defaultProps = {
     symbol: 'BTC'
@@ -23,18 +23,7 @@ export default class CoinChart extends Component {
   chart = {}
 
   fetchAndStoreData(){
-    const { symbol } = this.props
-
-
     this.storeData( BTC.price )
-
-    // fetch(`http://coincap.io/history/90day/${symbol}`)
-    //   .then( response => {
-    //     return response.json()
-    //   })
-    //   .then( result => {
-
-    //   })
   }
 
   storeData( data: Array<Array<number>> ){
@@ -90,8 +79,9 @@ export default class CoinChart extends Component {
       title: null,
       credits: { enabled: false },
       legend: { enabled: false },
+      tooltip: { enabled: false },
       chart: {
-        backgroundColor: null,
+        backgroundColor: 'transparent',
         borderWidth: 0,
         height: height,
         margin: [0,-14,0,-14],
@@ -111,25 +101,15 @@ export default class CoinChart extends Component {
           borderColor:'transparent',
         },
       },
-      tooltip: {
-        backgroundColor: chartColor,
-        borderWidth: 0,
-        borderRadius:4,
-        style: { color: 'white' },
-        shadow: false,
-        formatter: function (){
-          // TODO cut decimals
-          return this.y
-        }
-      },
+
       series: [
         {
           type: 'area',
           data: data,
-          color: color,
+          color: 'white',
           fillColor: {
             linearGradient: [0, 0, 0, height],
-            stops: [ [0, color], [1, transparentize(2, 'white')] ],
+            stops: [ [0, '#6DBEFC'], [1, 'rgba(255,255,255,0)'] ],
           },
           lineWidth: 1,
         }
@@ -142,16 +122,6 @@ export default class CoinChart extends Component {
       },
       xAxis: {
         title: null,
-        crosshair: {
-          snap: true,
-          color: m.colors.black20,
-          width: 1,
-        },
-        labels: {
-          padding:20,
-          distance:50,
-          style: { color: 'red', fontWeigth: 'bold', marginTop:'8px', fontSize: '10px' },
-        }
       }
     }
   }
@@ -166,4 +136,4 @@ import styled from 'styled-components'
 import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
 
-const Wrapper = styled.div` display:block; position:relative; width:100%; min-height:${height}px; height:${height}px; background:white; `
+const Wrapper = styled.div` display:block; position:relative; width:100%; min-height:${height}px; height:${height}px; `

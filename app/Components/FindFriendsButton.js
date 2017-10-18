@@ -50,9 +50,9 @@ import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
 
 const colors = {
-  facebook: '#4065B4',
-  twitter: '#1DA1F2',
-  email: '#F38E86',
+  facebook: m.colors.facebook,
+  twitter: m.colors.twitter,
+  email: m.colors.email,
 }
 
 const Text = styled.div` ${m.t2} ${s.asc} `

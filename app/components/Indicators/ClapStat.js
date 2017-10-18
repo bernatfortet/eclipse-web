@@ -1,9 +1,8 @@
 // @flow
 import React, { Component } from 'react'
+import MdThumbUp from 'react-icons/lib/md/thumb-up'
 
-import MdBubble from 'react-icons/lib/md/chat-bubble-outline'
-
-export default class Comments extends Component {
+export default class ClapStat extends Component {
 
   static defaultProps = {
     value: 0,
@@ -12,8 +11,8 @@ export default class Comments extends Component {
   render(){
     const { value } = this.props
     return(
-      <Wrapper>
-        <CommentsIcon />
+      <Wrapper vCenter>
+        <ClapIcon />
         <Value>{value}</Value>
       </Wrapper>
     )
@@ -26,7 +25,6 @@ import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
 
 const Wrapper = styled(Row)`  `
-
-const CommentsIcon = styled(MdBubble).attrs({ size:14 })` margin-right:4px; `
+const ClapIcon = styled(MdThumbUp).attrs({ size:14 })` ${m.icon} margin-right:4px; `
 
 const Value = styled.div` font-size:12px; `

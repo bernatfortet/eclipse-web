@@ -55,15 +55,19 @@ const textColor = '#BCC0C2'
 const CONFIG = {
   title: { text: '' },
   credits: { enabled: false },
+  legend: { enabled: false },
+  tooltip: { enabled: false },
+  chart: {
+    backgroundColor: 'transparent',
+    borderRadius: 8,
+    margin: [0,0,0,0],
+  },
   plotOptions: {
     series: {
       animation: { duration: 200 },
       marker: { enabled: false },
     },
   },
-  legend: { enabled: false },
-  tooltip: { enabled: false },
-  chart: { backgroundColor: 'transparent', borderRadius: 8, },
   series: [
     {
       type: 'treemap',

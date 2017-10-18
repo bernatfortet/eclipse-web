@@ -42,6 +42,10 @@ export const colors = {
   white80: rgba( white, 0.8),
   white90: rgba( white, 0.9),
   white: white,
+
+  facebook: '#4065B4',
+  twitter: '#1DA1F2',
+  email: '#F38E86',
 }
 
 
@@ -67,6 +71,7 @@ export const box = css` ${rounding} ${border} ${s.anchor} transition:200ms;
 export const h1 = css` color:${colors.black}; font-size:32px; line-height:38px; font-weight:600; color:${colors.black}; letter-spacing:-1px; `
 export const h2 = css` color:${colors.black}; font-size:24px; font-weight:400; letter-spacing:-0.6px; `
 
+export const t1 = css` color:${colors.black}; font-size:20px; font-weight:600; letter-spacing: -0.1px; text-rendering: geometricPrecision; `
 export const t2 = css` color:${colors.black}; font-size:18px; font-weight:600; letter-spacing: -0.1px; `
 export const t3 = css` color:${colors.black}; font-size:16px; font-weight:400; `
 export const t4 = css` color:${colors.black50}; font-size:14px; letter-spacing:2.1px; text-transform:uppercase; `
@@ -96,3 +101,7 @@ export const Content = styled(Row)` margin-left:${TOOLBAR_WIDTH}px; `
 
 // Atomic components
 export const CoinSymbol = styled.div` margin-left:4px; font-size:12px; line-height:15px; color:${colors.black40}; `
+export const UserName = styled.div` ${t2} `
+
+// ---------------------------
+// Homescreen Components

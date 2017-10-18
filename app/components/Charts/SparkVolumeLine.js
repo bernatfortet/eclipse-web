@@ -75,7 +75,6 @@ export default class SparkVolumeLine extends Component {
     const changeIsPositive = data[0][1] < data[data.length-1][1]
 
     const color = changeIsPositive ? m.colors.green : m.colors.red
-    const height = 65
 
     return {
       title: null,
@@ -135,5 +134,6 @@ export default class SparkVolumeLine extends Component {
 import styled from 'styled-components'
 import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
+const height = 45
 
-const Wrapper = styled.div` width:200px; border:1px solid black; `
+const Wrapper = styled.div` width:200px; height:${height} ` //border:1px solid black;
