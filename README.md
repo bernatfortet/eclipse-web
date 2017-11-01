@@ -43,9 +43,9 @@ Building
 Built Routes
 ---------------
 
-- Landing Page:     /
-- Onboarding:       /connect
-- Home Dashboard:   /dashboard
-- My Holdings:      /holdings
-- User Profile:     /profile/vinny
-- Coin Screen:      /coin/BTC
+- Landing Page:     http://localhost:3002*/*
+- Onboarding:       http://localhost:3002*/connect*
+- Home Dashboard:   http://localhost:3002*/dashboard*
+- My Holdings:      http://localhost:3002*/holdings*
+- User Profile:     http://localhost:3002*/profile/vinny*
+- Coin Screen:      http://localhost:3002*/coin/BTC*
