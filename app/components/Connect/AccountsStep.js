@@ -19,9 +19,9 @@ export default class AccountsStep extends Component {
         <List>
           {this.renderExchanges()}
         </List>
-        <List>
+        {/* <List>
           {this.renderWallets()}
-        </List>
+        </List> */}
       </Wrapper>
     )
   }
@@ -41,18 +41,15 @@ export default class AccountsStep extends Component {
       const wallet = wallets[key]
       return <WalletCard key={key} wallet={wallet} />
     })
-
   }
 
-
 }
+
 
 // Styles
 import styled, { css } from 'styled-components'
 import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
 
-
 const Wrapper = styled.div`  `
-
   const List = styled(Row)` ${s.flxWrap} margin:-8px 0 0 -8px; `

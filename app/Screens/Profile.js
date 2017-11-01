@@ -17,7 +17,6 @@ export default class Profile extends Screen {
 
 
   render(){
-    console.log(`this.props`, this.props )
     const userId = this.props.match.params.userId
     const user = users[userId]
     return(

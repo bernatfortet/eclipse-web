@@ -25,7 +25,7 @@ const STEPS = {
 export default class Connect extends Component {
 
   state = {
-    currentStep: 3,
+    currentStep: 1,
   }
 
   render(){
@@ -65,6 +65,7 @@ export default class Connect extends Component {
 
   renderNextStep(){
     const { currentStep } = this.state
+    if( currentStep >= 3 ) return null
     return(
       <Column aife>
         <Step>Step {currentStep} of 3</Step>

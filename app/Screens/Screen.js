@@ -3,9 +3,6 @@ import React, { Component } from 'react'
 
 export default class Screen extends Component {
 
-  static defaultProps = {
-  }
-
   componentDidUpdate(prevProps: Object) {
     if (this.props.location !== prevProps.location) {
       window.scrollTo(0, 0)
