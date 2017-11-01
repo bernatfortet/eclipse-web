@@ -43,9 +43,9 @@ Building
 Built Routes
 ---------------
 
-Landing Page:     /
-Onboarding:       /connect
-Home Dashboard:   /dashboard
-My Holdings:      /holdings
-User Profile:     /profile/vinny
-Coin Screen:      /coin/BTC
+- Landing Page:     /
+- Onboarding:       /connect
+- Home Dashboard:   /dashboard
+- My Holdings:      /holdings
+- User Profile:     /profile/vinny
+- Coin Screen:      /coin/BTC
