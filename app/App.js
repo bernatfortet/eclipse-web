@@ -3,24 +3,9 @@ import React, { Component } from 'react'
 import Routes from 'app/Routes'
 
 
-class App extends Component {
-
-  componentWillMount(){
-    this.props.onInitApp()
-  }
+export default class App extends Component {
 
   render() {
     return <Routes />
   }
 }
-
-//Redux Setup
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { onInitApp } from './controllers/init'
-import * as selectors from './controllers/selectors'
-
-const mapStateToProps = (state, props) => ({
-})
-const mapDispatchToProps = dispatch => bindActionCreators({ onInitApp}, dispatch)
-export default connect(mapStateToProps, mapDispatchToProps)(App)

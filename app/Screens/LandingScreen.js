@@ -11,15 +11,15 @@ import FriendsBlock from 'components/Homescreen/FriendsBlock'
 import AssetsBlock from 'components/Homescreen/AssetsBlock'
 import InfluencersBlock from 'components/Homescreen/InfluencersBlock'
 
-export default class HomeScreen extends Screen {
+export default class LandingScreen extends Screen {
 
   render(){
     return(
       <Wrapper>
         <HomescreenHeader />
-        <FriendsBlock />
+        {/* <FriendsBlock />
         <AssetsBlock />
-        <InfluencersBlock />
+        <InfluencersBlock /> */}
       </Wrapper>
     )
   }
@@ -31,4 +31,4 @@ import styled from 'styled-components'
 import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
 
-const Wrapper = styled.div`  `
+const Wrapper = styled.div` `

@@ -36,7 +36,7 @@ import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as m from 'styles/main'
 import * as h from 'styles/homescreen'
 
-const Wrapper = styled(Column)` height:800px; margin-bottom:60px; ${s.rel}
+const Wrapper = styled(Column)` height:800px; ${s.rel}
   background-image: linear-gradient(-70deg, #262CBF 0%, #5240D6 86%);
 `
 

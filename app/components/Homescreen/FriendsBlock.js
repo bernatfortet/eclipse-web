@@ -24,4 +24,4 @@ import styled from 'styled-components'
 import { s, c, Row, Column } from '@bernatfortet/global-styles'
 import * as h from 'styles/homescreen'
 
-const Wrapper = styled.div`  `
+const Wrapper = styled.div` margin-top:60px; `
