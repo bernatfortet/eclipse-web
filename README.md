@@ -18,19 +18,6 @@ Getting Started
 
 5. Open [http://localhost:3002]()
 
-
-Built Routes
----------------
-<Route exact path={`/`} component={HomeScreen}/>
-<Route exact path={`/connect`} component={Connect}/>
-
-<Route exact path={`/dashboard`} component={Dashboard}/>
-<Route exact path={`/holdings`} component={Holdings}/>
-<Route exact path={`/profile/:userId`} component={Profile}/>
-<Route exact path={`/coin/:coinSymbol`} component={Coin}/>
-<Route exact path={`/settings`} component={Settings}/>
-
-
 Building
 ---------------
 
@@ -39,3 +26,15 @@ Building
   `yarn build`
 
 2. You can now used the contents of the `build` folder and serve the page
+
+
+
+Built Routes
+---------------
+
+Landing Page:     /
+Onboarding:       /connect
+Home Dashboard:   /dashboard
+My Holdings:      /holdings
+User Profile:     /profile/vinny
+Coin Screen:      /coin/BTC
