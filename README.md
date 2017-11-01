@@ -18,6 +18,8 @@ Getting Started
 
 5. Open [http://localhost:3002]()
 
+
+
 Building
 ---------------
 
@@ -25,7 +27,16 @@ Building
 
   `yarn build`
 
-2. You can now used the contents of the `build` folder and serve the page
+3. Install serve to try build on your local machine
+
+  `yarn global add serve`
+
+3. Run local server
+
+  `serve -s build`
+
+4. You can use the `build` folder contents and deploy anywhere you want
+
 
 
 
